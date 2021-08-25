@@ -1,0 +1,32 @@
+<div class="col-md-6 offset-md-3">
+        <h3>Add Plant</h3>
+        <form (ngSubmit) = "onSubmit()">
+            <div class = "form-group">
+                <label>ID</label>
+                <input type="text" class="form-control" id="id"
+                    [(ngModel)] = "plant.id" name="id">
+            </div>
+            <div class = "form-group">
+                <label>Name</label>
+                <input type="text" class="form-control" id="name"
+                    [(ngModel)] = "plant.name" name="name">
+            </div>
+            <div class = "form-group">
+                <label>Age</label>
+                <input type="text" class="form-control" id="age"
+                    [(ngModel)] = "plant.age" name="age">
+            </div>
+            <div class = "form-group">
+                <label>Type</label>
+                <input type="text" class="form-control" id="type"
+                    [(ngModel)] = "plant.type" name="type">
+            </div>
+            <div class = "form-group">
+                <label>Special Care Instrustions</label>
+                <input type="text" class="form-control" id="specialInstructions"
+                    [(ngModel)] = "plant.specialInstructions" name="specialInstructions">
+            </div>
+    
+            <button class="btn btn-success" type="submit">Submit</button>
+        </form>
+    </div>

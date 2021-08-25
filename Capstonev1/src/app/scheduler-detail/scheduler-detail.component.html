@@ -1,0 +1,34 @@
+<div>
+    <mat-list>
+        <mat-list-item>Id: {{scheduler.id}}</mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item>Name: {{scheduler.name}}</mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item>Last Watered: {{scheduler.lastWatered}}</mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item>Next Watering: {{scheduler.nextWatered}}</mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item>Last Fertilized: {{scheduler.lastFertilized}}</mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item>Next Fertilization: {{scheduler.nextFertilized}}</mat-list-item>
+        <mat-divider></mat-divider>
+
+        <mat-list-item>Plants:</mat-list-item>
+
+        <mat-list-item *ngFor="let plant of scheduler.plants">
+            <button (click)="goToPlantDetail(plant.id)"
+            class="btn btn-success"
+            id="viewBtn">{{plant.name}}</button>
+        </mat-list-item>
+        <!-- <mat-list-item>
+                <button (click)="goToSchedulerList()"
+                class="btn-btn-primary"
+                id="viewBtn">Back To Schedules</button>
+            </mat-list-item> -->
+    </mat-list>
+</div>

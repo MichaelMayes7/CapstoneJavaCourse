@@ -1,0 +1,37 @@
+<h2>Plant List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <!-- <th></th> -->
+            <th>Age</th>
+            <th>Type</th>
+            <th>Update</th>
+            <th>Delete</th>
+            <th>View</th>
+            <!-- <th>Watering:</th> -->
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let plant of plants">
+            <td>{{plant.id}}</td>
+            <td>{{plant.name}}</td>
+            <!-- <td *ngIf="isWatered;else content"><i class="fa fa-tint" aria-hidden="true"></i></td>
+            <ng-template #content><td><i class="fas fa-tint-slash" aria-hidden="true"></i></td></ng-template> -->
+            <td>{{plant.age}}</td>
+            <td>{{plant.type}}</td>
+            <td>
+                <button (click) = "updatePlant(plant.id)" class = "btn btn-success">Update</button>
+            </td>
+            <td>
+                <button (click) = "deletePlant(plant.id)" class = "btn btn-warning" id = "deleteBtn">Delete</button>
+            </td>
+            <td>
+                <button (click) = "viewPlant(plant.id)" class = "btn btn-secondary" id = "viewBtn">View</button>
+            </td>
+            <!-- <td><button (click) = "showIcon(plant.id)" class = "btn-btn-success">Watered</button>
+        <button (click) = "hideIcon(plant.id)" class = "btn-btn-success">Thirsty</button></td> -->
+        </tr>
+    </tbody>
+</table>

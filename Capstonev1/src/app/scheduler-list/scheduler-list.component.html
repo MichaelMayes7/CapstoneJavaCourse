@@ -1,0 +1,41 @@
+<h2>Schedule List</h2>
+<table class = "table table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Schedule Name</th>
+            <th>Last Watered</th>
+            <th>Next Watering</th>
+            <th>Fertilized?</th>
+            <th>Plants</th>
+            <th>Update</th>
+            <th>Delete</th>
+            <th>View</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let scheduler of schedulers">
+            <td>{{scheduler.id}}</td>
+            <td>{{scheduler.name}}</td>
+            <td>{{scheduler.lastWatered}}</td>
+            <td>{{scheduler.nextWatered}}</td>
+            <td>{{scheduler.lastFertilized}}</td>
+            <td>
+                <ul *ngFor = "let plant of scheduler.plants">
+                    <li>
+                        {{plant.name}}
+                    </li>
+                </ul>
+            </td>
+            <td>
+                    <button (click) = "updateScheduler(scheduler.id)" class = "btn btn-success" id = "viewBtn">Update</button>
+            </td>
+            <td>
+                    <button (click) = "deleteScheduler(scheduler.id)" class = "btn btn-warning" id = "viewBtn">Delete</button>
+                </td>
+            <td>
+                <button (click) = "viewScheduler(scheduler.id)" class = "btn btn-secondary" id = "viewBtn">View</button>
+            </td>    
+        </tr>
+    </tbody>
+</table>

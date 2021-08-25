@@ -1,0 +1,69 @@
+<div class="col-md-6 offset-md-3">
+        <h3>Update Schedule</h3>
+        <form (ngSubmit) = "onSubmit()">
+            <div class = "form-group">
+                <label>ID</label>
+                <input type="text" class="form-control" id="id"
+                    [(ngModel)] = "scheduler.id" name="id">
+            </div>
+            <div class = "form-group">
+                    <label>Name</label>
+                    <input type="text" class="form-control" id="name"
+                        [(ngModel)] = "scheduler.name" name="name">
+                </div>
+            <!--LAST WATERED DATEPICKER-->
+    <div class="flex-container">
+        <div class="flex-child">
+            <div class="col-xs-12 col-12 col-md-4 form-group">
+                <label for="lastWatered">Last Watered</label>
+                    <input type="text" 
+                        class="form-control" 
+                        bsDatepicker 
+                        [bsValue]="bsValue"
+                        [bsConfig]="datePickerConfig" 
+                        [(ngModel)]="scheduler.lastWatered" 
+                        autocomplete="off"
+                        name="lastWatered"/>
+            </div>
+    
+            <div class="col-xs-12 col-12 col-md-4 form-group">
+                    <label for="nextWatered">Next Watering</label>
+                        <input type="text" 
+                            class="form-control" 
+                            bsDatepicker 
+                            [bsValue]="bsValue"
+                            [bsConfig]="datePickerConfig" 
+                            [(ngModel)]="scheduler.nextWatered" 
+                            autocomplete="off"
+                            name="nextWatered"/>
+            </div>
+        </div>
+            <div class="flex-child">
+                    <div class="col-xs-12 col-12 col-md-4 form-group">
+                            <label for="lastFertilized">Last Fertilized</label>
+                                <input type="text" 
+                                    class="form-control" 
+                                    bsDatepicker 
+                                    [bsValue]="bsValue"
+                                    [bsConfig]="datePickerConfig" 
+                                    [(ngModel)]="scheduler.lastFertilized" 
+                                    autocomplete="off"
+                                    name="lastFertilized"/>
+                        </div>
+                
+                        <div class="col-xs-12 col-12 col-md-4 form-group">
+                                <label for="nextFertilized">Next Fertilization</label>
+                                    <input type="text" 
+                                        class="form-control" 
+                                        bsDatepicker 
+                                        [bsValue]="bsValue"
+                                        [bsConfig]="datePickerConfig" 
+                                        [(ngModel)]="scheduler.nextFertilized" 
+                                        autocomplete="off"
+                                        name="nextFertilized"/>
+                        </div>
+            </div>
+        </div>
+            <button class="btn btn-success" type="submit">Submit</button>
+        </form>
+    </div>
