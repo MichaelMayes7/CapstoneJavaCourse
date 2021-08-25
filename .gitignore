@@ -1,4 +1,5 @@
 #NODE_MODULES/
+node_modules/
 
 /target/
 !.mvn/wrapper/maven-wrapper.jar
